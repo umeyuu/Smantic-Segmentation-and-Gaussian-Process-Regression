@@ -1,5 +1,12 @@
 # Smantic-Segmentation-and-Gaussian-Process-Regression
 
+We propose a method for predicting the depth value of missing parts of depth images using Gaussian process regression. We extracted the category likelihood of pixels in RGB images using semantic segmentation, and estimated the depth using Gaussian process regression on the feature space with the location information added. To account for uncertainty in the category likelihood, a penalty term was introduced into the covariance matrix. By generalizing the proposed method, we were able to derive a Gaussian process regression that takes into account the observed noise of the explanatory variables. This generalized method does not treat all input data equally, but seems to perform regression with a preference based on the uncertainty of the input data, leading to the conclusion that it is a highly versatile method.
+
+
+
+
+
+
 ## 1. Download Citysoace and place it as follow
 ```
 /datasets
