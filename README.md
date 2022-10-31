@@ -16,7 +16,7 @@ python train.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vi
 python predict.py --input data_path  --dataset cityscapes --model deeplabv3plus_resnet101 --ckpt model_path --save_val_results_to save_dir
 ```
 
-## Estimating depth per pixel with Gaussian process regression using semantic segmentation results
+## 4. Estimating depth per pixel with Gaussian process regression using semantic segmentation results
 ```
 python GP_exe_evaluate.py
 ```
