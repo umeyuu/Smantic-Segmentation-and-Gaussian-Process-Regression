@@ -9,7 +9,7 @@ We propose a method for predicting the depth value of missing parts of depth ima
 
 ## Proposed Gaussian Regression
 
-We propose to introduce a penalty term in the covariance matrix of a Gaussian process when there is uncertainty in the input. Let u_x be the uncertainty of the input x. The formulation is as follows.
+We propose to introduce a penalty term in the covariance matrix of a Gaussian process when there is uncertainty in the input. Let $u_x$ be the uncertainty of the input $x$. The formulation is as follows.
 
 $$f \cong N\left(k^{*T}K^{-1}Y, k_{**}-k_{*}^{T}K^{-1}k_{*}\right)$$
 
@@ -17,7 +17,7 @@ $$f \cong N\left(k^{*T}K^{-1}Y, k_{**}-k_{*}^{T}K^{-1}k_{*}\right)$$
 █(k_(**)=k(x_*, x_* )#(3) )
 █(K=(■(k(x_1, x_1 )+w(u_(x_1 )×u_(x_1 ) )&⋯&k(z_1, z_N )+w(u_(x_1 )×u_(x_N ) )@⋮&⋱&⋮@k(x_N, x_1 )+w(u_(x_N )×u_(x_1 ) )&⋯&k(x_N, x_N )+w(u_(x_N )×u_(x_N ) ) ))#(4) )
 
-where w is the weight parameter and k(x,x^' ) is the kernel function. 
+where $w$ is the weight parameter and $k(x,x^{'})$ is the kernel function. 
 
 ***
 
