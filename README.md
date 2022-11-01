@@ -11,11 +11,19 @@ We propose a method for predicting the depth value of missing parts of depth ima
 
 We propose to introduce a penalty term in the covariance matrix of a Gaussian process when there is uncertainty in the input. Let $u_x$ be the uncertainty of the input $x$. The formulation is as follows.
 
-$$f \cong N\left(k^{*T}K^{-1}Y, k_{**}-k_{*}^{T}K^{-1}k_{*}\right)$$
+$$ f \sim N\left(k_{\star}^{T}K^{-1}Y, k_{\star\star}-k_{\star}^{T}K^{-1}k_{\star}\right) $$
 
-█(k_*=(k(x_*, x_1 )… k(x_*, x_N ))
-█(k_(**)=k(x_*, x_* )#(3) )
-█(K=(■(k(x_1, x_1 )+w(u_(x_1 )×u_(x_1 ) )&⋯&k(z_1, z_N )+w(u_(x_1 )×u_(x_N ) )@⋮&⋱&⋮@k(x_N, x_1 )+w(u_(x_N )×u_(x_1 ) )&⋯&k(x_N, x_N )+w(u_(x_N )×u_(x_N ) ) ))#(4) )
+$$ k_{\star} = (k(x_{\star},x_1 )… k(x_{\star}, x_N )) $$
+
+$$ k_{\star\star} = k(x_{\star}, x_{\star}) $$
+
+$$ K=
+\begin{pmatrix}
+k(x_1, x_1)+w(u_{x_1}, u_{x_1}) & \cdots & k(x_1, x_N)+w(u_{x_1}, u_{x_N}) \\
+\vdots & \ddots & \vdots \\
+k(x_{N} x_1)+w(u_{x_{N}}, u_{x_1}) & \cdots & k(x_N, x_N)+w(u_{x_N}, u_{x_N}) \\
+\end{pmatrix}
+$$
 
 where $w$ is the weight parameter and $k(x,x^{'})$ is the kernel function. 
 
