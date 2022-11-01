@@ -25,7 +25,9 @@ k(x_{N} x_1)+w(u_{x_{N}}, u_{x_1}) & \cdots & k(x_N, x_N)+w(u_{x_N}, u_{x_N}) \\
 \end{pmatrix}
 $$
 
-where $w$ is the weight parameter and $k(x,x^{'})$ is the kernel function. This proposed method is written in `proposed_method.ipynb`.
+where $w$ is the weight parameter and $k(x,x^{'})$ is the kernel function. 
+
+This proposed method is written in `proposed_method.ipynb`.
 
 ***
 
